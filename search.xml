@@ -7,7 +7,7 @@
 <p>2.Numbers</p>
 <p>3.Boolean</p>
 <h2 id="Sign"><a href="#Sign" class="headerlink" title="Sign"></a>Sign</h2><p>1.Insert a new line into the string. <code>\n</code></p>
-<p>2.Insert a quatation marks into the string. <code>\ &quot;</code></p>
+<p>2.Insert a quatation marks into the string. <code>\ </code></p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Giraffe \n Academy&quot;</span>)</span><br></pre></td></tr></table></figure>
 
 <p>3.Concatenation between strings and strings. (<code>+</code>, this sign cannot use with number, you need to put <code>str()</code> that convert the number into strings)</p>
@@ -144,6 +144,22 @@
 ]]></content>
       <tags>
         <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo</title>
+    <url>/2022/04/30/hexo/</url>
+    <content><![CDATA[<h1 id="How-to-insert-the-picture-in-hero"><a href="#How-to-insert-the-picture-in-hero" class="headerlink" title="How to insert the picture in hero"></a>How to insert the picture in hero</h1><p>1.Install the plug-in unit in terminal . (The pathway should be in <code>/blog</code> folder)</p>
+<figure class="highlight arduino"><table><tr><td class="code"><pre><span class="line">npm install hexo-asset-image</span><br></pre></td></tr></table></figure>
+
+<p>2.enter the <code>_config.yml</code> in root folder, change <code>post_asset_folder: false</code> into <code>post_asset_folder: true</code>.</p>
+<p>3.using command <code>hexo new newArticle</code> to create a new post in pathway <code>blog/source/_post/</code>. It will create a .md and file. Then, you need to put the picture into the file.</p>
+<p><img src="/2022/04/30/hexo/image-20220430151908867.png" alt="image-20220430151908867"></p>
+<p>4.put the picture in the newArticle folder and use the relative pathway of picture in post. </p>
+<p><img src="/2022/04/30/hexo/image-20220430152023702.png" alt="image-20220430152023702"></p>
+]]></content>
+      <tags>
+        <tag>Hexo</tag>
       </tags>
   </entry>
 </search>
