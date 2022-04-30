@@ -1,26 +1,151 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Python</title>
-    <url>/2022/04/16/Python/</url>
-    <content><![CDATA[<h2 id="First-chapter"><a href="#First-chapter" class="headerlink" title="First chapter"></a>First chapter</h2><p>context</p>
-<hr>
-<h2 id="Second-chapter"><a href="#Second-chapter" class="headerlink" title="Second chapter"></a>Second chapter</h2>]]></content>
-      <tags>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>R-studio</title>
-    <url>/2022/04/16/R-studio/</url>
-    <content><![CDATA[<h2 id="First-chapter"><a href="#First-chapter" class="headerlink" title="First chapter"></a>First chapter</h2><p>context</p>
-<hr>
-<h2 id="Second-chapter"><a href="#Second-chapter" class="headerlink" title="Second chapter"></a>Second chapter</h2><p>context</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">  printf(&quot;%d\n&quot;,100);</span><br><span class="line">  return 0</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr>
+    <title>python</title>
+    <url>/2022/04/30/python/</url>
+    <content><![CDATA[<h1 id="Basic-command-in-Python"><a href="#Basic-command-in-Python" class="headerlink" title="Basic command in Python"></a>Basic command in Python</h1><h2 id="Type-of-data"><a href="#Type-of-data" class="headerlink" title="Type of data"></a>Type of data</h2><p>1.Strings (you need quotation marks)</p>
+<p>2.Numbers</p>
+<p>3.Boolean</p>
+<h2 id="Sign"><a href="#Sign" class="headerlink" title="Sign"></a>Sign</h2><p>1.Insert a new line into the string. &#x3D;&#x3D;\n&#x3D;&#x3D;</p>
+<p>2.Insert a quatation marks into the string. &#x3D;&#x3D;\ “&#x3D;&#x3D;</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Giraffe \n Academy&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>3.Concatenation between strings and strings. (&#x3D;&#x3D;+&#x3D;&#x3D;, this sign cannot use with number, you need to put &#x3D;&#x3D;str()&#x3D;&#x3D; that convert the number into strings)</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">phrase = &quot;Giraffe Academy&quot;</span><br><span class="line">print(phrase + &quot;Giraffe Academy&quot;)</span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<h2 id="Simple-Function"><a href="#Simple-Function" class="headerlink" title="Simple Function"></a>Simple Function</h2><p>1.Detect how many characters in strings</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">len</span>()</span><br></pre></td></tr></table></figure>
+
+<p>2.Grab the character inside string</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">phrase = <span class="string">&quot;Giraffe Academy&quot;</span></span><br><span class="line"><span class="built_in">print</span>(phrase[<span class="number">0</span>])</span><br></pre></td></tr></table></figure>
+
+<p>3.Specify the index of character inside string</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">phrase = <span class="string">&quot;Giraffe Academy&quot;</span></span><br><span class="line"><span class="built_in">print</span>(phrase.index(<span class="string">&quot;G&quot;</span>))</span><br></pre></td></tr></table></figure>
+
+<p>4.Replace the character inside string</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">phrase = <span class="string">&quot;Giraffe Academy&quot;</span></span><br><span class="line"><span class="built_in">print</span>(phrase.replace(<span class="string">&quot;Giraffe&quot;</span>, <span class="string">&quot;Elephant&quot;</span>))</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Working-with-number"><a href="#Working-with-number" class="headerlink" title="Working with number"></a>Working with number</h2><p>1.Get the reminder</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="number">10</span> % <span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+
+<p>2.Absolute value</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">my = -<span class="number">5</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">abs</span>(my_number))</span><br></pre></td></tr></table></figure>
+
+<p>3.Floor: just simply cut out the number after the decimal. Ceil: just simply upper the number. Round: just round up the number. (We need to import the package)</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> math <span class="keyword">import</span> *</span><br><span class="line"><span class="built_in">print</span>(floor(<span class="number">3.7</span>))</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Getting-input-from-user"><a href="#Getting-input-from-user" class="headerlink" title="Getting input from user"></a>Getting input from user</h2><p>1.Geting the input</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">name = <span class="built_in">input</span>(<span class="string">&quot;Enter your name: &quot;</span>)</span><br><span class="line">age = <span class="built_in">input</span>(<span class="string">&quot;Enter your age: &quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello &quot;</span> + name + <span class="string">&quot;!&quot;</span>, <span class="string">&quot;you are &quot;</span> + age)</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Building-a-calculator"><a href="#Building-a-calculator" class="headerlink" title="Building a calculator"></a>Building a calculator</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">## if the number is integer number</span></span><br><span class="line">num1 = <span class="built_in">input</span>(<span class="string">&quot;Enter a number: &quot;</span>)</span><br><span class="line">num2 = <span class="built_in">input</span>(<span class="string">&quot;Enter another number:&quot;</span>)</span><br><span class="line">result = <span class="built_in">int</span>(num1) + <span class="built_in">int</span>(num2) <span class="comment">## since python will automatically percieve the number as a string, we need to convert the strings into number.</span></span><br><span class="line"><span class="built_in">print</span>(result)</span><br><span class="line"></span><br><span class="line"><span class="comment">## if the inputed number is a decimal number</span></span><br><span class="line">result = <span class="built_in">float</span>(num1) + <span class="built_in">float</span>(num2)</span><br><span class="line"><span class="built_in">print</span> = (result)</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="List"><a href="#List" class="headerlink" title="List"></a>List</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">friends = [<span class="string">&quot;Kevin&quot;</span>, <span class="string">&quot;Karen&quot;</span>, <span class="string">&quot;Jim&quot;</span>]</span><br><span class="line"><span class="built_in">print</span>(friends[<span class="number">0</span>]) <span class="comment">## get access to the elements, -1 means at back of list.</span></span><br><span class="line"><span class="built_in">print</span>(friends[<span class="number">1</span>:<span class="number">3</span>])</span><br><span class="line"></span><br><span class="line">friends[<span class="number">1</span>] = <span class="string">&quot;Mike&quot;</span> <span class="comment">## change the Karen into Mike.</span></span><br><span class="line"></span><br><span class="line">lucky_number = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line">friends.append(<span class="string">&quot;Creed&quot;</span>) <span class="comment">## add the element at the end of the list.</span></span><br><span class="line"><span class="built_in">print</span>(friends)</span><br><span class="line"></span><br><span class="line">friends.extend(lucky_number) <span class="comment">## add the list at end of the list.</span></span><br><span class="line"><span class="built_in">print</span>(friends)</span><br><span class="line"></span><br><span class="line">friends.insert(<span class="number">1</span>, <span class="string">&quot;Creed&quot;</span>) <span class="comment">## add the element at the 1 position in the list.</span></span><br><span class="line"><span class="built_in">print</span>(friends)</span><br><span class="line"></span><br><span class="line">friends.remove(<span class="string">&quot;Jim&quot;</span>) <span class="comment">## remove certain element.</span></span><br><span class="line"><span class="built_in">print</span>(friends)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(friends.index(<span class="string">&quot;Kevin&quot;</span>)) <span class="comment">## print the index of certain element of the list.</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(friends.count(<span class="string">&quot;Kevin&quot;</span>)) <span class="comment">## count how many time does &quot;Kevin&quot; appear.</span></span><br><span class="line"></span><br><span class="line">friends.sort() <span class="comment">## order the list according to the alphabet</span></span><br><span class="line"></span><br><span class="line">friends2 = friends.copy() <span class="comment">## copy the list</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Tuple"><a href="#Tuple" class="headerlink" title="Tuple"></a>Tuple</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">coordinates = (<span class="number">4</span>, <span class="number">5</span>) <span class="comment">## Tuple is immutable which means we can not change the element in tuple e.g. coordinates [1] = 1. But if it is a list, we can change the element thought this way.</span></span><br><span class="line"><span class="built_in">print</span>(coordinates[<span class="number">0</span>])</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Function"><a href="#Function" class="headerlink" title="Function"></a>Function</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">sayhi</span>(<span class="params">name, age</span>): <span class="comment">## the parameter you want to specify</span></span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;Hello &quot;</span> + name + <span class="string">&quot;, you are &quot;</span> + <span class="built_in">str</span>(age))</span><br><span class="line"> </span><br><span class="line">sayhi(<span class="string">&quot;Mike&quot;</span>, <span class="number">35</span>)</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Return"><a href="#Return" class="headerlink" title="Return"></a>Return</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">cube</span>(<span class="params">num</span>):</span><br><span class="line">  <span class="keyword">return</span> num*num*num <span class="comment">## return the function to the value, all the function after &quot;return&quot; keyword will not be executed.</span></span><br><span class="line">  </span><br><span class="line">result = cube(<span class="number">3</span>)</span><br><span class="line"><span class="built_in">print</span>(result)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="If"><a href="#If" class="headerlink" title="If"></a>If</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">is_male = <span class="literal">True</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> is_male:</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;You are a male&quot;</span>) <span class="comment">## this function will print &quot;You are a male&quot;.</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;You are not a male&quot;</span>)<span class="comment">## it will print &quot;You are a male&quot; when statement is false.</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">is_male = <span class="literal">True</span></span><br><span class="line">is_tall = <span class="literal">True</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> is_male <span class="keyword">or</span> is_tall:</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;You are a male or tall or both&quot;</span>) <span class="comment">## Both statements are true, it will print.</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;You neither male nor tall&quot;</span>) </span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line"><span class="keyword">if</span> is_male <span class="keyword">and</span> is_tall:</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;You are a male and tall&quot;</span>) <span class="comment">## Both statements are true, it will print.</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;You are either male or not tall or both&quot;</span>) </span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line"><span class="keyword">if</span> is_male <span class="keyword">and</span> is_tall:</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;You are a male and tall&quot;</span>) <span class="comment">## Both statements are true, it will print.</span></span><br><span class="line"><span class="keyword">elif</span> is_male <span class="keyword">and</span> <span class="keyword">not</span>(is_tall):</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;You are a male and not tall&quot;</span>)</span><br><span class="line"><span class="keyword">elif</span> <span class="keyword">not</span>(is_male) <span class="keyword">and</span> is_tall:</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;You are not a male but tall&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;You are either male or not tall or both&quot;</span>) </span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">max_num</span>(<span class="params">num1, num2, num3</span>):</span><br><span class="line">  <span class="keyword">if</span> num1 &gt;= num2 <span class="keyword">and</span> num1 &gt;= num3:</span><br><span class="line">    <span class="keyword">return</span> num1</span><br><span class="line">  <span class="keyword">elif</span> num2 &gt;= num1 <span class="keyword">and</span> num2 &gt;= num3:</span><br><span class="line">    <span class="keyword">return</span> num2</span><br><span class="line">  <span class="keyword">else</span>:</span><br><span class="line">    <span class="keyword">return</span> num3</span><br><span class="line">  </span><br><span class="line"><span class="built_in">print</span>(max_num(<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">## create a calculator</span></span><br><span class="line">num1 = <span class="built_in">float</span>(<span class="built_in">input</span>(<span class="string">&quot;Enter first number: &quot;</span>)) <span class="comment">## no matter what type of variable the user enters, python will treat it as a string, this is why use &quot;float&quot; function.</span></span><br><span class="line">op = <span class="built_in">input</span>(<span class="string">&quot;Enter operator: &quot;</span>)</span><br><span class="line">num2 = <span class="built_in">float</span>(<span class="built_in">input</span>(<span class="string">&quot;Enter second number: &quot;</span>))</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> op == <span class="string">&quot;+&quot;</span>:</span><br><span class="line">  <span class="built_in">print</span>(num1 + numb2)</span><br><span class="line"><span class="keyword">elif</span> op == <span class="string">&quot;-&quot;</span>:</span><br><span class="line">  <span class="built_in">print</span>(num1 - numb2)</span><br><span class="line"><span class="keyword">elif</span> op == <span class="string">&quot;/&quot;</span>:</span><br><span class="line">  <span class="built_in">print</span>(num1 / numb2)</span><br><span class="line"><span class="keyword">elif</span> op == <span class="string">&quot;*&quot;</span>:</span><br><span class="line">  <span class="built_in">print</span>(num1 * numb2)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;Invalid operater!&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Dictionary"><a href="#Dictionary" class="headerlink" title="Dictionary"></a>Dictionary</h2><ol>
+<li>allowing us to store the key value pairs, we can access to correspondent value</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">monthConversions = &#123;</span><br><span class="line">	<span class="string">&quot;Jan&quot;</span>: <span class="string">&quot;January&quot;</span>,</span><br><span class="line">  <span class="string">&quot;Feb&quot;</span>: <span class="string">&quot;February&quot;</span>,</span><br><span class="line">  <span class="string">&quot;Mar&quot;</span>: <span class="string">&quot;March&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(monthConversions[<span class="string">&quot;Jan&quot;</span>])</span><br><span class="line"><span class="built_in">print</span>(monthConversions.get(<span class="string">&quot;Jan&quot;</span>))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="While-loop"><a href="#While-loop" class="headerlink" title="While loop"></a>While loop</h2><p>1.repeatly execute the code until certain condition satisfies.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">i=<span class="number">1</span></span><br><span class="line"><span class="keyword">while</span> i &lt;= <span class="number">10</span>:</span><br><span class="line">  <span class="built_in">print</span>(i)</span><br><span class="line">  i = i + <span class="number">1</span> <span class="comment">## short version &quot;i += 1&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Done with loop&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="For-loop"><a href="#For-loop" class="headerlink" title="For loop"></a>For loop</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> letter <span class="keyword">in</span> <span class="string">&quot;Giraffe Academy&quot;</span>:</span><br><span class="line">  <span class="built_in">print</span>(letter) <span class="comment">## for each letter in &quot;Giraffe Academy&quot;, it will print them.</span></span><br><span class="line">  </span><br><span class="line"><span class="keyword">for</span> index <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">3</span>, <span class="number">10</span>):</span><br><span class="line">  <span class="built_in">print</span>(index)</span><br><span class="line">  </span><br><span class="line">friends = [<span class="string">&quot;A&quot;</span>, <span class="string">&quot;B&quot;</span>, <span class="string">&quot;C&quot;</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> index <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(friends)):</span><br><span class="line">  <span class="built_in">print</span>(friends[index]) <span class="comment">## this will print A, B and C. all the elements in friends.</span></span><br><span class="line">  </span><br><span class="line"><span class="keyword">for</span> index <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">5</span>): <span class="comment">## do separate change for the first element.</span></span><br><span class="line">  <span class="keyword">if</span> index == <span class="number">0</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;first Iteration&quot;</span>)</span><br><span class="line">  <span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Not the first&quot;</span>)</span><br><span class="line">    </span><br><span class="line"><span class="keyword">def</span> <span class="title function_">raise_to_power</span>(<span class="params">base_num, pow_num</span>): <span class="comment">## create a power calculator</span></span><br><span class="line">  <span class="keyword">return</span> = <span class="number">1</span></span><br><span class="line"><span class="keyword">for</span> index <span class="keyword">in</span> <span class="built_in">range</span>(pow_num):</span><br><span class="line">  result = result * base_num</span><br><span class="line">  <span class="keyword">return</span> result</span><br><span class="line"></span><br><span class="line">raise_to_power(<span class="number">2</span>, <span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="List-and-nested-for-loop"><a href="#List-and-nested-for-loop" class="headerlink" title="List and nested for loop"></a>List and nested for loop</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">number_grid = [  <span class="comment">## create a list in list.</span></span><br><span class="line">	[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], </span><br><span class="line">	[<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>], </span><br><span class="line">	[<span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>], </span><br><span class="line">	[<span class="number">0</span>]</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(number_grid[<span class="number">0</span>][<span class="number">0</span>]) <span class="comment">## get access to first list, first element in first list.</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> row <span class="keyword">in</span> number_grid: <span class="comment">## print out all the element inside the all lists.</span></span><br><span class="line">  <span class="keyword">for</span> col <span class="keyword">in</span> row:</span><br><span class="line">    <span class="built_in">print</span>(col)</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="translator"><a href="#translator" class="headerlink" title="translator"></a>translator</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">translate</span>(<span class="params">phrase</span>): <span class="comment">## translate vowel into &quot;g&quot; but keep other letters the phrase </span></span><br><span class="line">  translation = <span class="string">&quot;&quot;</span></span><br><span class="line">  <span class="keyword">for</span> letter <span class="keyword">in</span> phrase:</span><br><span class="line">    <span class="keyword">if</span> letter <span class="keyword">in</span> <span class="string">&quot;AEIOUaeiou&quot;</span>:</span><br><span class="line">      translation = translation + <span class="string">&quot;g&quot;</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">      translation = translation + letter</span><br><span class="line">  <span class="keyword">return</span> translation</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(translate(<span class="built_in">input</span>(<span class="string">&quot;Enter a phrase: &quot;</span>)))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Reading-file"><a href="#Reading-file" class="headerlink" title="Reading file"></a>Reading file</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">## open &quot;employees.txt&quot;</span></span><br><span class="line">employee_file = <span class="built_in">open</span>(<span class="string">&quot;employees.txt&quot;</span>, <span class="string">&quot;r&quot;</span>) <span class="comment">## r:reading. w:writing. </span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(employee_file.readable()) <span class="comment"># it returns to a boolean value, whether file can be read.</span></span><br><span class="line"><span class="built_in">print</span>(employee_file.read()) <span class="comment"># read the file</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(employee_file.readline()) <span class="comment"># read the first line</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(employee.file.readlines()) <span class="comment"># put all the line into a list.</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(employee.file.readlines()[<span class="number">1</span>]) <span class="comment"># you can get access to the first element of list</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> employee_file <span class="keyword">in</span> employee_file.readlines(): <span class="comment"># print all the elements in the  list</span></span><br><span class="line">  <span class="built_in">print</span>(employee)</span><br><span class="line">  </span><br><span class="line">employee_file.close()</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Writing-a-file"><a href="#Writing-a-file" class="headerlink" title="Writing a file"></a>Writing a file</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">employee_file = <span class="built_in">open</span>(<span class="string">&quot;employees.txt&quot;</span>, <span class="string">&quot;a&quot;</span>) <span class="comment"># appending to the file </span></span><br><span class="line">employee_file.write(<span class="string">&quot;Toby - Human Resources&quot;</span>) <span class="comment"># add the &quot;Toby - Human Resources&quot; at the end of the file Note:(if you run it second time, it will add the context at the end of the file again)</span></span><br><span class="line">employee_file.write(<span class="string">&quot;\n Toby - Human Resources&quot;</span>) <span class="comment"># add into a new line</span></span><br><span class="line"></span><br><span class="line">employee_file = <span class="built_in">open</span>(<span class="string">&quot;employees.txt&quot;</span>, <span class="string">&quot;w&quot;</span>) <span class="comment"># clear all the context in the file and write new context. Also, you can set a new name, then python will create a new text for you.</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Modules-and-pip"><a href="#Modules-and-pip" class="headerlink" title="Modules and pip"></a>Modules and pip</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> useful_tools <span class="comment">## then, you can use all of the functions in useful_tools.py file.(external python file) </span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(useful_tools.roll_dice(<span class="number">10</span>)) <span class="comment"># you can get access to function &quot;roll_dice()&quot; in useful_tool.py file</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>Also, you can get access to other modules. Let’s just see some of them. (Website: <a href="https://docs.python.org/">https://docs.python.org</a>) In the external libraries, you can get access to the modules which already have downloaded in your Python.</p>
+<p><img src="/2022/04/30/python/2.png" alt="2"></p>
+<p><img src="/2022/04/30/python/3.png" alt="3"></p>
+<p>&#x3D;&#x3D;pip&#x3D;&#x3D; is a function to help you to install the modules outside the python.</p>
+<p>1.First you need to install &#x3D;&#x3D;pip&#x3D;&#x3D;. Open terminal and execute &#x3D;&#x3D;python3 get-pip.py&#x3D;&#x3D;</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">python3 get-pip.py</span><br></pre></td></tr></table></figure>
+
+<p>2.Install the external modules.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pip install python-docx</span><br></pre></td></tr></table></figure>
+
+<p>3.check your installation.</p>
+<p><img src="/2022/04/30/python/1.png" alt="1"></p>
+<p>4.We can use it by &#x3D;&#x3D;.&#x3D;&#x3D;</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import docx</span><br><span class="line">docx.</span><br></pre></td></tr></table></figure>
+
+<p>5.You can remove the modules in terminal.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pip uninstall python-docx</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Class-and-objects"><a href="#Class-and-objects" class="headerlink" title="Class and objects"></a>Class and objects</h2><p>1.Create a data type which can not be coverd by those already in python.(e.g number, strings). First creating a new student.py file.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Student</span>: <span class="comment">## create a student data type  </span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, name, major, gpa, is_on_probation</span>):</span><br><span class="line">        self.name = name</span><br><span class="line">        self.major = major</span><br><span class="line">        self.gpa = gpa</span><br><span class="line">        self.is_on_probation = is_on_probation </span><br></pre></td></tr></table></figure>
+
+
+
+<p>2.In your current python.py file.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> student <span class="string">&#x27;this refers to name of file&#x27;</span> <span class="keyword">import</span> Student <span class="string">&#x27;this refers to name of data type&#x27;</span></span><br><span class="line"></span><br><span class="line">student1 = Student(<span class="string">&quot;jim&quot;</span>, <span class="string">&quot;Business&quot;</span>, <span class="number">3.1</span>, <span class="literal">False</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(student1.gpa) <span class="comment"># print out the student&#x27;s gpa.</span></span><br></pre></td></tr></table></figure>
+
+
+
 ]]></content>
       <tags>
-        <tag>R language</tag>
+        <tag>Python(basic)</tag>
       </tags>
   </entry>
 </search>
