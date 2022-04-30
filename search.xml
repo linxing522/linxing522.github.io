@@ -6,12 +6,12 @@
     <content><![CDATA[<h1 id="Basic-command-in-Python"><a href="#Basic-command-in-Python" class="headerlink" title="Basic command in Python"></a>Basic command in Python</h1><h2 id="Type-of-data"><a href="#Type-of-data" class="headerlink" title="Type of data"></a>Type of data</h2><p>1.Strings (you need quotation marks)</p>
 <p>2.Numbers</p>
 <p>3.Boolean</p>
-<h2 id="Sign"><a href="#Sign" class="headerlink" title="Sign"></a>Sign</h2><p>1.Insert a new line into the string. &#x3D;&#x3D;\n&#x3D;&#x3D;</p>
-<p>2.Insert a quatation marks into the string. &#x3D;&#x3D;\ “&#x3D;&#x3D;</p>
+<h2 id="Sign"><a href="#Sign" class="headerlink" title="Sign"></a>Sign</h2><p>1.Insert a new line into the string. <code>\n</code></p>
+<p>2.Insert a quatation marks into the string. <code>\ &quot;</code></p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Giraffe \n Academy&quot;</span>)</span><br></pre></td></tr></table></figure>
 
-<p>3.Concatenation between strings and strings. (&#x3D;&#x3D;+&#x3D;&#x3D;, this sign cannot use with number, you need to put &#x3D;&#x3D;str()&#x3D;&#x3D; that convert the number into strings)</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">phrase = &quot;Giraffe Academy&quot;</span><br><span class="line">print(phrase + &quot;Giraffe Academy&quot;)</span><br></pre></td></tr></table></figure>
+<p>3.Concatenation between strings and strings. (<code>+</code>, this sign cannot use with number, you need to put <code>str()</code> that convert the number into strings)</p>
+<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line">phrase = <span class="string">&quot;Giraffe Academy&quot;</span></span><br><span class="line"><span class="function"><span class="title">print</span><span class="params">(phrase + <span class="string">&quot;Giraffe Academy&quot;</span>)</span></span></span><br></pre></td></tr></table></figure>
 
 <span id="more"></span>
 
@@ -116,20 +116,18 @@
 <p>Also, you can get access to other modules. Let’s just see some of them. (Website: <a href="https://docs.python.org/">https://docs.python.org</a>) In the external libraries, you can get access to the modules which already have downloaded in your Python.</p>
 <p><img src="/2022/04/30/python/2.png" alt="2"></p>
 <p><img src="/2022/04/30/python/3.png" alt="3"></p>
-<p>&#x3D;&#x3D;pip&#x3D;&#x3D; is a function to help you to install the modules outside the python.</p>
-<p>1.First you need to install &#x3D;&#x3D;pip&#x3D;&#x3D;. Open terminal and execute &#x3D;&#x3D;python3 get-pip.py&#x3D;&#x3D;</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">python3 get-pip.py</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><figcaption><span>is a function to help you to install the modules outside the python.</span></figcaption><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">1.First you need to install ```pip```. Open terminal and execute ```python3 get-pip.py```</span><br><span class="line"></span><br><span class="line">```python</span><br><span class="line">python3 get-pip.py</span><br></pre></td></tr></table></figure>
 
 <p>2.Install the external modules.</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pip install python-docx</span><br></pre></td></tr></table></figure>
+<figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">pip <span class="keyword">install</span> python-docx</span><br></pre></td></tr></table></figure>
 
 <p>3.check your installation.</p>
 <p><img src="/2022/04/30/python/1.png" alt="1"></p>
-<p>4.We can use it by &#x3D;&#x3D;.&#x3D;&#x3D;</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import docx</span><br><span class="line">docx.</span><br></pre></td></tr></table></figure>
+<p>4.We can use it by <code>.</code></p>
+<figure class="highlight elm"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> docx</span><br><span class="line"><span class="title">docx</span>.</span><br></pre></td></tr></table></figure>
 
 <p>5.You can remove the modules in terminal.</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pip uninstall python-docx</span><br></pre></td></tr></table></figure>
+<figure class="highlight ebnf"><table><tr><td class="code"><pre><span class="line"><span class="attribute">pip uninstall python-docx</span></span><br></pre></td></tr></table></figure>
 
 
 
@@ -145,7 +143,7 @@
 
 ]]></content>
       <tags>
-        <tag>Python(basic)</tag>
+        <tag>Python</tag>
       </tags>
   </entry>
 </search>
